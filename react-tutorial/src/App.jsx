@@ -1,8 +1,10 @@
 import "./app.css";
 import "./Title.jsx"
 import Product from "./Product.jsx";
-import ProductTab from "./ProductTab.jsx"
-import MsgBox from "./MsgBox.jsx"
+import ProductTab from "./ProductTab.jsx";
+import MsgBox from "./MsgBox.jsx";
+
+
 function App(){
   return(
     <>
