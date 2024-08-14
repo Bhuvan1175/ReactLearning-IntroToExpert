@@ -1,26 +1,11 @@
 import { useState } from 'react';
-
 export default function Mode() {
   const [bgColor, setMode] = useState('white');
 
-  const changeMode = () => {
-    console.log('Mode Change');
-    setMode(bgColor === 'white' ? 'black' : 'white');
-  };
-
-  const style = {
-    backgroundColor: bgColor,
-    color: bgColor === 'white' ? 'gold' : 'Orange', 
-    fontSize: '50px',
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
 
   return (
-    <div style={style}>
-      <p onClick={changeMode} style={{ cursor: 'pointer' }}>
+    <div className='page' style={{ backgroundColor: bgColor, minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <p onClick={()=>setMode(bgColor === 'white' ? 'black' : 'white')} style={{ cursor: 'pointer' ,color: bgColor === 'white' ? 'gold' : 'Orange' , fontSize:"20px"}}>
         {bgColor === 'white' ? (
             <i className="fa-solid fa-moon"></i>
         ) : (
